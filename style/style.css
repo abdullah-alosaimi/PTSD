@@ -1,0 +1,7 @@
+.mainTheme {
+    background-image: url("../img/Theme.jpeg");
+    background-color: #bce0fa;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: auto;
+}

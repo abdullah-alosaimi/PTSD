@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+    <link rel="stylesheet" href="./style/style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Pass The Stuff Down</title>
@@ -30,7 +32,7 @@
                         <label class="fs-3 fw-bold">Search For a Book . . . </label>
                         <div class="input-group mb-3 bg-white">
                             <input type="text" class="form-control border border-dark" placeholder="Search For A book ..." aria-label="Search" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                            <a href="./search.html"> <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button> </a>
                         </div>
 
 
@@ -41,11 +43,50 @@
         </div>
 
         <div class="row p-2">
-            <div class="shadow col-12 h-50 w-100 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
+            <div class="shadow col-6 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                    <a class="btn btn-warning mx-4 fs-4" href="#" role="button">Sign in</a>
-                    <a class="btn btn-primary mx-4 fs-4" href="#" role="button">Create account</a>
+                    <form>
+
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <a class="btn btn-warning mx-4 fs-4" href="#" role="button">Sign in</a>
+
+                    </form>
+
+                </center>
+            </div>
+            <div class="shadow col-6  align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
+
+                <center>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Confirm Password</label>
+                        </div>
+
+
+                        <a class="btn btn-primary mx-4 fs-4" href="#" role="button">Create account</a>
+                    </form>
+
                 </center>
             </div>
         </div>
