@@ -2,7 +2,6 @@ Project Pass The Stuff Down
 Phase 1 (css, html)
 by:
 	Abdullah ALosaimi, 2172131914
-	Abdulaziz Faraj, 2152135999
 
 link:
 	
