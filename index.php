@@ -21,7 +21,8 @@
 </head>
 
 <body>
-
+    
+    <?php  include './db.php'; ?>
     <div class="container-fluid">
         <div class="row p-2">
             <div class="shadow col-12 h-50 w-100 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">

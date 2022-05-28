@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+<?php  include './db.php'; ?>
 <?php  include './header.php'; ?>
 
 
