@@ -21,80 +21,17 @@
 
 
     <div class="row row-cols-1 row-cols-md-4 g-4 mt-2  ms-5">
-        <div class="col">
-            <div class="card shadow" style="width: 18rem;">
-                <img src="./img/java-how-to.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Java How to Program [4]</h5>
-                    <p class="card-text">Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program</p>
-                    <a href="#" class="btn btn-primary">Request the book</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow " style="width: 18rem;">
-                <img src="./img/java-how-to.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Java How to Program [5]</h5>
-                    <p class="card-text">Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program</p>
-                    <a href="#" class="btn btn-primary">Request the book</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow" style="width: 18rem;">
-                <img src="./img/java-how-to.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Java How to Program [10]</h5>
-                    <p class="card-text">Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program</p>
-                    <a href="#" class="btn btn-primary">Request the book</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card shadow" style="width: 18rem;">
-                <img src="./img/java-how-to.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Java How to Program [6]</h5>
-                    <p class="card-text">Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program</p>
-                    <a href="#" class="btn btn-primary">Request the book</a>
-                </div>
-            </div>
-        </div>
+        <?php 
+            for($i=0; $i < 10; $i++){
+                $offer_no = 99;
+                $req_no = 22;
+                $title = 'Data Base From A to Z';
 
-        <div class="col">
-            <div class="card shadow" style="width: 18rem;">
-                <img src="./img/java-how-to.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Java How to Program [2]</h5>
-                    <p class="card-text">Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program</p>
-                    <a href="#" class="btn btn-primary">Request the book</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card shadow" style="width: 18rem;">
-                <img src="./img/java-how-to.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Java How to Program [2]</h5>
-                    <p class="card-text">Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program</p>
-                    <a href="#" class="btn btn-primary">Request the book</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card shadow" style="width: 18rem;">
-                <img src="./img/java-how-to.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Java How to Program [4]</h5>
-                    <p class="card-text">Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program Java How to Program</p>
-                    <a href="#" class="btn btn-primary">Request the book</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                include './card.php';
+            }
+            
+            
+        ?>
 </body>
 
 </html>
