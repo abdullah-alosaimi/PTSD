@@ -13,9 +13,9 @@
                   Account
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./requests.html">Manage requests</a></li>
-                            <li><a class="dropdown-item" href="./offerbook.html">Make an offer</a></li>
-                            <li><a class="dropdown-item" href="./account.html">Account page</a></li>
+                            <li><a class="dropdown-item" href="./requests.php">Manage requests</a></li>
+                            <li><a class="dropdown-item" href="./offerbook.php">Make an offer</a></li>
+                            <li><a class="dropdown-item" href="./account.php">Account page</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
