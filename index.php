@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    
+
     <?php  include './db.php'; ?>
     <div class="container-fluid">
         <div class="row p-2">
@@ -53,7 +53,7 @@
             <div class="shadow col-6 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                    <form>
+                    <form method="GET" action="./signip.php">
 
 
                         <div class="form-floating mb-3">
@@ -67,7 +67,7 @@
                             <label for="floatingPassword">Password</label>
                             <small id="pass-err-signin"></small>
                         </div>
-                        <button class="btn btn-warning mx-4 fs-4" onclick="chk_signin();">Sign in</button>
+                        <button class="btn btn-warning mx-4 fs-4" onclick="chk_signin();" type="submit">Sign in</button>
 
                     </form>
 
@@ -76,7 +76,7 @@
             <div class="shadow col-6  align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                    <form>
+                    <form method="GET" action="./signup.php">
                         <div class="form-floating mb-3">
                             <input id="email-signup" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">Email address</label>
@@ -96,7 +96,7 @@
                         </div>
 
 
-                        <button class="btn btn-primary mx-4 fs-4" onclick="chk_signup();">Create account</button>
+                        <button class="btn btn-primary mx-4 fs-4" onclick="chk_signup();" type="submit">Create account</button>
                     </form>
 
                 </center>

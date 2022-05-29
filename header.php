@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top rounded-bottom rounded-3" style="background-color: #bce0fa;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">
+            <a class="navbar-brand" href="./index.php">
                 <img src="./favicon.svg" alt="Icon" width="50" height="60">
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
