@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <link rel="stylesheet" href="./style/style.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Pass The Stuff Down</title>
-
-    <style>
-        small {
-            color: red;
-        }
-    </style>
-</head>
-
-<body>
+<?php include 'init.php' ?>
 
     <?php  include './db.php'; ?>
     <div class="container-fluid">
@@ -53,7 +31,8 @@
             <div class="shadow col-6 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                    <form onsubmit="return chk_signin();" method="POST" action="./signip.php">
+                    <?php if(!isset($_SESSION['login_user'])): ?>
+                    <form onsubmit="return chk_signin();" method="POST" action="./signin.php">
 
 
                         <div class="form-floating mb-3">
@@ -70,12 +49,18 @@
                         <button class="btn btn-warning mx-4 fs-4" onclick="chk_signin();" type="submit">Sign in</button>
 
                     </form>
-
+                    <?php endif;?>
+                    <?php if(isset($_SESSION['login_user'])): ?>
+                        <h1>id: </h1> <h2><?php echo $_SESSION['id'] ?></h2>
+                        <h1>Email: </h1> <h2><?php echo $_SESSION['email'] ?></h2>
+                        <h1>points: </h1> <h2><?php echo $_SESSION['points'] ?></h2>
+                    <?php endif;?>
                 </center>
             </div>
             <div class="shadow col-6  align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
+                <?php if(!isset($_SESSION['login_user'])): ?>
                     <form onsubmit="return chk_signup();" method="POST" action="./signup.php">
                         <div class="form-floating mb-3">
                             <input name="email-signup" required id="email-signup" type="email" class="form-control"  placeholder="name@example.com">
@@ -98,7 +83,7 @@
 
                         <button class="btn btn-primary mx-4 fs-4" onclick="chk_signup();" type="submit">Create account</button>
                     </form>
-
+                    <?php endif;?>
                 </center>
             </div>
         </div>

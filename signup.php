@@ -18,7 +18,7 @@ function cleanData($data){
     if($mypass != $mycpass){
         include 'init.php';
         include("header.php");
-        echo ' <h1>password don\'t match <a href="./index.php">click here to go back<\a></h1></body></html>';
+        echo ' <h1>password don\'t match <a href="./index.php">click here to go back</a></h1></body></html>';
         die();
     }
 
