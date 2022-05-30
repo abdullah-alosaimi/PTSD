@@ -1,5 +1,7 @@
 <?php
-function cleanData($data){
+    include 'init.php';
+    include 'header.php';
+    function cleanData($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = trim($data);
@@ -31,11 +33,11 @@ function cleanData($data){
         $a = $_SESSION['email'];
         $b = $_SESSION['id'];
         $c = $_SESSION['points'];
-
-        include 'init.php';
-        include 'header.php'; 
+       
+ 
     
-        print `$a, $b, $c</body></html>`;
+        echo `$a, $b, $c</body></html>`;
+        echo "<h1>HERE AND THERE</h1>";
         //header("location: index.php");
      }else {
         $error = '<h1> Your Login Name or Password is invalid <a href="./index.php">click here to go back </a> </h1>';
