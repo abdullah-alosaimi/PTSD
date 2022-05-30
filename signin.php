@@ -2,11 +2,11 @@
     include 'init.php';
     include 'header.php';
     function cleanData($data){
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = trim($data);
-    $data = htmlspecialchars($data);
-    $data = strip_tags($data);
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = trim($data);
+        $data = htmlspecialchars($data);
+        $data = strip_tags($data);
     return $data;
 }
     if(isset($_POST['email-signin']) && isset($_POST['pass-signin'])){
