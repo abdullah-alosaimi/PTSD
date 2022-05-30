@@ -53,18 +53,18 @@
             <div class="shadow col-6 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                    <form method="GET" action="./signip.php">
+                    <form onsubmit="return chk_signin();" method="POST" action="./signip.php">
 
 
                         <div class="form-floating mb-3">
-                            <input id="email-signin" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
+                            <input name="email-signin" required id="email-signin" type="email" class="form-control" placeholder="name@example.com">
+                            <label for="email-signin">Email address</label>
                             <small id="email-err-signin"></small>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input id="pass-signin" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
+                            <input name="pass-signin" required id="pass-signin" type="password" class="form-control" placeholder="Password">
+                            <label for="pass-signin">Password</label>
                             <small id="pass-err-signin"></small>
                         </div>
                         <button class="btn btn-warning mx-4 fs-4" onclick="chk_signin();" type="submit">Sign in</button>
@@ -76,22 +76,22 @@
             <div class="shadow col-6  align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                    <form method="GET" action="./signup.php">
+                    <form onsubmit="return chk_signup();" method="POST" action="./signup.php">
                         <div class="form-floating mb-3">
-                            <input id="email-signup" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
+                            <input name="email-signup" required id="email-signup" type="email" class="form-control"  placeholder="name@example.com">
+                            <label for="email-signup">Email address</label>
                             <small id="email-err-signup"></small>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input id="pass-signup" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
+                            <input name="pass-signup" required id="pass-signup" type="password" class="form-control"  placeholder="Password">
+                            <label for="pass-signup">Password</label>
                             <small id="pass-err-signup"></small>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input id="cpass-signup" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Confirm Password</label>
+                            <input name="cpass-signup" required id="cpass-signup" type="password" class="form-control" placeholder="Password">
+                            <label for="cpass-signup">Confirm Password</label>
                             <small id="cpass-err-signup"></small>
                         </div>
 
@@ -106,6 +106,7 @@
 
     <script>
         function chk_signin() {
+            var what = true;
             var email = document.getElementById("email-signin").value;
             var pass = document.getElementById("pass-signin").value;
 
@@ -122,13 +123,18 @@
             errPass.innerHTML = "";
             if (email.match(regexEmail) == null) {
                 errEmail.innerHTML = msgEmail;
+                what = false;
             }
             if (pass.match(regexPass) == null) {
                 errPass.innerHTML = msgPass;
+                what = false;
             }
+
+            return what;
         }
 
         function chk_signup() {
+            var what = true;
             var email = document.getElementById("email-signup").value;
             var pass = document.getElementById("pass-signup").value;
             var cpass = document.getElementById("cpass-signup").value;
@@ -150,13 +156,18 @@
 
             if (email.match(regexEmail) == null) {
                 errEmail.innerHTML = msgEmail;
+                what = false;
             }
             if (pass.match(regexPass) == null) {
                 errPass.innerHTML = msgPass;
+                what = false;
             }
             if (cpass != pass) {
                 errCpass.innerHTML = msgMatch;
+                what = false;
             }
+
+            return what;
         }
     </script>
 </body>
