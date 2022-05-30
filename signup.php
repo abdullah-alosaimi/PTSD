@@ -18,7 +18,7 @@ function cleanData($data){
     if($mypass != $mycpass){
         include 'init.php';
         include("header.php");
-        echo ' <h1>password don\'t match <a href="./index.php">click here to go back<\a></h1>';
+        echo ' <h1>password don\'t match <a href="./index.php">click here to go back<\a></h1></body></html>';
         die();
     }
 
@@ -33,7 +33,7 @@ function cleanData($data){
         $pageTitle = "Add Result";
         include 'init.php';
         include("header.php");
-          echo "<h1 align = 'center'>The user email Already Exists</h1>";
+          echo "<h1 align = 'center'>The user email Already Exists</h1></body></html>";
     }
     else {
         $sql = "INSERT INTO `user` (email, pass, points) VALUES ('$myemail', '$mypass', '$pts')";
