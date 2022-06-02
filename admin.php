@@ -38,6 +38,7 @@
                             $id = $row['id'];
                             $email = $row['email'];
                             $points = $row['points'];
+                            
 
                             echo "
                                     <tr>
@@ -52,13 +53,13 @@
                                 </td>
                                 <td class=\"text-center\">
                                     <form method=\"POST\" action=\"./deleteUser.php\">
-                                        <input type=\"hidden\" value=\"$id\">
+                                        <input id=\"id\" name=\"id\" type=\"hidden\" value=\"$id\">
                                         <button type=\"button\" class=\"btn btn-danger\">DELETE</button>
                                     </form>
                                 </td>
                                 <td class=\"text-center\">
                                     <form method=\"POST\" action=\"./adminUser.php\">
-                                        <input type=\"hidden\" value=\"$id\">
+                                        <input id=\"id\" name=\"id\" type=\"hidden\" value=\"$id\">
                                         <button type=\"button\" class=\"btn btn-primary\">Make Admin</button>
                                     </form>
                                 </td>

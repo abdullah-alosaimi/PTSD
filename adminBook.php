@@ -59,7 +59,7 @@
                                 </td>
                                 <td class=\"text-center\">
                                     <form method=\"POST\" action=\"./deleteBook.php\">
-                                        <input type=\"hidden\" value=\"$id\">
+                                        <input id=\"id\" name=\"id\" type=\"hidden\" value=\"$id\">
                                         <button type=\"button\" class=\"btn btn-danger\">DELETE</button>
                                     </form>
                                 </td>
