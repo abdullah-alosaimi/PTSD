@@ -35,10 +35,10 @@
         $c = $_SESSION['points'];
        
  
-        echo "<h1> omar $row[email]</h1>";
-        echo "<h1>$a, $b, $c</h1>";
-        echo "<h1>HERE AND THERE</h1></body></html>";
-        //header("location: index.php");
+        // echo "<h1> omar $row[email]</h1>";
+        // echo "<h1>$a, $b, $c</h1>";
+        //echo "<h1>HERE AND THERE</h1></body></html>";
+        header("location: index.php");
      }else {
         $error = '<h1> Your Login Name or Password is invalid <a href="./index.php">click here to go back </a> </h1>';
      }

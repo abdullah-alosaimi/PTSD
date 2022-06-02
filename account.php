@@ -9,32 +9,32 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">
-                                Name
+                            <th scope="col" class="text-center">
+                                User ID
                             </th>
-                            <th scope="col">
+                            <th scope="col" class="text-center">
                                 Email
                             </th>
-                            <th scope="col">
+                            <th scope="col" class="text-center">
                                 Points
                             </th>
-                            <th scope="col">
+                            <th scope="col" class="text-center">
                                 Edit
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
-                                Abdullah Alosaimi
+                            <td class="text-center">
+                                <?php echo $_SESSION['id'] ?>
                             </td>
-                            <td>
-                                abdullah.alosaimi@ccseku.edu.kw
+                            <td class="text-center">
+                                <?php echo $_SESSION['email'] ?>
                             </td>
-                            <td>
-                                11
+                            <td class="text-center">
+                                <?php echo $_SESSION['points'] ?>
                             </td>
-                            <td>
+                            <td class="text-center">
                                 <button type="button" class="btn btn-primary">Edit Account</button>
                             </td>
                         </tr>
