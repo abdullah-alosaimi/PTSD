@@ -35,7 +35,7 @@
         $c = $_SESSION['points'];
        
  
-    
+        echo `$row['email']`;
         echo `$a, $b, $c</body></html>`;
         echo "<h1>HERE AND THERE</h1>";
         //header("location: index.php");
