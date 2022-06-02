@@ -12,23 +12,23 @@
                 </h1>
                 <form onsubmit="return false;">
                     <div class="mb-3">
-                        <label for="formFile" class="form-label text-lg-start fw-bolder">1-Book name</label>
+                        <label for="formFile" class="form-label text-lg-start fw-bolder">1-Book name*</label>
                         <input class="form-control" type="text" placeholder="eg. Java how to program" aria-label="default input example">
                     </div>
 
                     <div class="mb-3">
-                        <label for="formFile" class="form-label text-lg-start fw-bolder">2-Upload an image</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label for="formFile" class="form-label text-lg-start fw-bolder">2-Send image link</label>
+                        <input class="form-control" type="text" placeholder="eg. *url*.png" aria-label="default input example">
                     </div>
 
                     <div class="mb-3">
-                        <label for="formFile" class="form-label text-lg-start fw-bolder">3-ISBN</label>
+                        <label for="formFile" class="form-label text-lg-start fw-bolder">3-ISBN*</label>
                         <input id="isbn" class="form-control" type="text" placeholder="eg. 978-3-16-148410-0" aria-label="default input example">
                         <small id="err-isbn"></small>
                     </div>
 
                     <div class="mb-3">
-                        <label for="formFile" class="form-label text-lg-start fw-bolder">4-For course?</label>
+                        <label for="formFile" class="form-label text-lg-start fw-bolder">4-For course?*</label>
                         <input class="form-control" type="text" placeholder="eg. Programming 1" aria-label="default input example">
                     </div>
                     <button class="btn btn-primary mb-3" onclick="chk();">Submit</button>
