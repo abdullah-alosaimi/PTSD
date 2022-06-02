@@ -15,6 +15,9 @@
                          Account
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <?php if(isset($_SESSION['admin'])): ?>
+                                <li><a class="dropdown-item" href="./admin.php">Admin Dashboard</a></li>
+                            <?php endif;?>
                             <li><a class="dropdown-item" href="./requests.php">Manage requests</a></li>
                             <li><a class="dropdown-item" href="./offerbook.php">Make an offer</a></li>
                             <li><a class="dropdown-item" href="./account.php">Account page</a></li>

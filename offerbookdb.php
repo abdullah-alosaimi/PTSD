@@ -39,9 +39,9 @@
     $sql = "INSERT INTO `offers` (bid, uid) VALUES ($bid, $uid)";
     $result = mysqli_query($db, $sql);
 
-    echo "
+    echo '
             <h1>Offer made</h1> <a class=\"btn btn-primary\" href=\"./offerbook.php\" role=\"button\">go back</a>
             <a class=\"btn btn-primary\" href=\"./account.php\" role=\"button\">Go to account page</a>
         </body>
-        </html>";
+        </html>';
 ?>

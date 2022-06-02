@@ -30,14 +30,15 @@
         $_SESSION['email'] = $row['email'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['points'] = $row['points'];
-        $a = $_SESSION['email'];
-        $b = $_SESSION['id'];
-        $c = $_SESSION['points'];
-       
- 
-        // echo "<h1> omar $row[email]</h1>";
-        // echo "<h1>$a, $b, $c</h1>";
-        //echo "<h1>HERE AND THERE</h1></body></html>";
+
+        
+        $result = mysqli_query($db, "SELECT * FROM `admin` WHERE id='$_SESSION[id]'; ");
+        $count = mysqli_num_rows($result);
+        if($count == 1){
+            $_SESSION['admin'] = true;
+        }
+
+
         header("location: index.php");
      }else {
         $error = '<h1> Your Login Name or Password is invalid <a href="./index.php">click here to go back </a> </h1>';

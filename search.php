@@ -1,4 +1,4 @@
-<?php include 'init.php' ?>
+<?php include 'init.php'; ?>
     <?php  include './db.php'; ?>
     <?php  include './header.php'; ?>
 
