@@ -36,7 +36,7 @@
 
     $bid = $row['id'];
     $uid = $_SESSION['id'];
-    $sql = "INSERT INTO `offers` (date, bid, uid) VALUES ($date, $bid, $uid)";
+    $sql = "INSERT INTO `offers` (bid, uid) VALUES ($bid, $uid)";
     $result = mysqli_query($db, $sql);
 
     echo "

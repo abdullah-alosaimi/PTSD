@@ -13,14 +13,12 @@
         <div class="row p-2">
             <div class="shadow col-12 h-50 w-100 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
                 <center>
-                    <form>
+                    <form action="./search.php" method="GET" >
                         <label class="fs-3 fw-bold">Search For a Book . . . </label>
                         <div class="input-group mb-3 bg-white">
-                            <input type="text" class="form-control border border-dark" placeholder="Search For A book ..." aria-label="Search" aria-describedby="button-addon2">
-                            <a href="./search.php"> <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button> </a>
+                            <input id="search" name="search" type="text" class="form-control border border-dark" placeholder="Search For A book ..." aria-label="Search" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
                         </div>
-
-
                     </form>
 
                 </center>
@@ -106,11 +104,6 @@
                     </div>
                 </div>
                                 
-                                 
-
-                                
-
-
             </div>
         <?php endif;?>
         </div>
