@@ -20,10 +20,10 @@
 
     
 
-    include 'db.php';
-
+    echo "<h1>before query</h1>";
     $result = mysqli_query($db, "SELECT * FROM `books` WHERE isbn='$isbn' or title LIKE '%$bookname%' LIMIT 1");
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    
 
     $count = mysqli_num_rows($result);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
