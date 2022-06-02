@@ -78,16 +78,16 @@
                             echo "
                                     <tr>
                                 <th scope=\"row\">
-                                    A25
+                                    $oid
                                 </th>
                                 <td>
-                                    Java How to program
+                                    $title
                                 </td>
                                 <td>
-                                    978-0-06-264154-0
+                                    $isbn
                                 </td>
                                 <td>
-                                    15<b>MAR</b>2022
+                                    $date
                                 </td>
                                 <td class=\"text-center\">
                                     <button type=\"button\" class=\"btn btn-danger\">Remove</button>

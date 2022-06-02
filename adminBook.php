@@ -9,20 +9,23 @@
 
 <div class="container-fluid">
     <div class="row p-2">
-            <h1>All users: </h1>
+            <h1>All Books: </h1>
             <table class="table table-info table-striped shadow col-12 h-50 w-100 align-middle p-3 border border-dark rounded">
                 <thead>
                     <tr>
                         <th scope="col">
-                            User ID
+                            Book ID
                         </th>
                         <th scope="col">
-                            Email
+                            Title
                         </th>
                         <th scope="col">
-                           Points
+                           ISBN
                         </th>
-                        <th scope="col" colspan="2" class="text-center">
+                        <th scope="col">
+                            Image
+                        </th>
+                        <th scope="col" class="text-center">
                             Action
                         </th>
                     </tr>
@@ -31,13 +34,14 @@
                     <?php
                         include 'db.php';
 
-                        $sql = "SELECT * FROM `user`";
+                        $sql = "SELECT * FROM `books`";
                         $result = mysqli_query($db, $sql);
 
                         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                             $id = $row['id'];
-                            $email = $row['email'];
-                            $points = $row['points'];
+                            $title = $row['title'];
+                            $isbn = $row['isbn'];
+                            $img = $row['img'];
 
                             echo "
                                     <tr>
@@ -45,21 +49,18 @@
                                     $id
                                 </th>
                                 <td>
-                                    $email
+                                    $title
                                 </td>
                                 <td>
-                                    $points
+                                    $isbn
+                                </td>
+                                <td>
+                                    <img src=\"$img\" width=\"50\">
                                 </td>
                                 <td class=\"text-center\">
-                                    <form method=\"POST\" action=\"./deleteUser.php\">
+                                    <form method=\"POST\" action=\"./deleteBook.php\">
                                         <input type=\"hidden\" value=\"$id\">
                                         <button type=\"button\" class=\"btn btn-danger\">DELETE</button>
-                                    </form>
-                                </td>
-                                <td class=\"text-center\">
-                                    <form method=\"POST\" action=\"./adminUser.php\">
-                                        <input type=\"hidden\" value=\"$id\">
-                                        <button type=\"button\" class=\"btn btn-primary\">Make Admin</button>
                                     </form>
                                 </td>
                             </tr>
