@@ -129,29 +129,40 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">
-                            A25
-                        </th>
-                        <td>
-                            Java How to program
-                        </td>
-                        <td>
-                            978-0-06-264154-0
-                        </td>
-                        <td>
-                            UserName LastName
-                        </td>
-                        <td>
-                            15<b>MAR</b>2022
-                        </td>
-                        <td class="text-center">
-                            <button type="button" class="btn btn-secondary">Accept</button>
-                        </td>
-                        <td class="text-center">
-                            <button type="button" class="btn btn-danger">Deny</button>
-                        </td>
-                    </tr>
+                <?php
+                        $sql = "SELECT request.id AS rid, books.title AS title, books.isbn AS isbn, request.date AS mydate, request.uid AS uid  FROM `request` JOIN `books` ON books.id = request.bid WHERE uid='$_SESSION[id]';";
+                        $result = mysqli_query($db, $sql);
+                        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                            $rid = $row['rid'];
+                            $title = $row['title'];
+                            $isbn = $row['isbn'];
+                            $date = $row['mydate'];
+
+                            echo "
+                                    <tr>
+                                <th scope=\"row\">
+                                    $rid
+                                </th>
+                                <td>
+                                    $title
+                                </td>
+                                <td>
+                                    $isbn
+                                </td>
+                                <td>
+                                    $uid
+                                </td>
+                                <td>
+                                    $date
+                                </td>
+                                <td class=\"text-center\">
+                                    <button type=\"button\" class=\"btn btn-danger\">Remove</button>
+                                </td>
+                            </tr>
+                            ";
+                        }
+                        
+                    ?>
                   
                 </tbody>
             </table>
