@@ -31,7 +31,7 @@
             <div class="shadow col-6 align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                    <?php if(!isset($_SESSION['login_user'])): ?>
+                    <?php if(!isset($_SESSION['email'])): ?>
                     <form onsubmit="return chk_signin();" method="POST" action="./signin.php">
 
 
@@ -50,17 +50,17 @@
 
                     </form>
                     <?php endif;?>
-                    <?php if(isset($_SESSION['login_user'])): ?>
-                        <h1>id: </h1> <h2><?php echo $_SESSION['id'] ?></h2>
-                        <h1>Email: </h1> <h2><?php echo $_SESSION['email'] ?></h2>
-                        <h1>points: </h1> <h2><?php echo $_SESSION['points'] ?></h2>
+                    <?php if(isset($_SESSION['email'])): ?>
+                        <div></div><h1>id: </h1> <h2><?php echo $_SESSION['id'] ?></h2></div>
+                        <div><h1>Email: </h1> <h2><?php echo $_SESSION['email'] ?></h2></div>
+                        <div><h1>points: </h1> <h2><?php echo $_SESSION['points'] ?></h2></div>
                     <?php endif;?>
                 </center>
             </div>
             <div class="shadow col-6  align-middle p-3 border border-dark rounded" style="background-color: #bce0fa;">
 
                 <center>
-                <?php if(!isset($_SESSION['login_user'])): ?>
+                <?php if(!isset($_SESSION['email'])): ?>
                     <form onsubmit="return chk_signup();" method="POST" action="./signup.php">
                         <div class="form-floating mb-3">
                             <input name="email-signup" required id="email-signup" type="email" class="form-control"  placeholder="name@example.com">
